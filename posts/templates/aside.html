@@ -1,0 +1,42 @@
+ <style>
+   #id_tags{
+		max-height: 100px;
+		overflow-y: scroll;
+		border:1px solid #888;
+		padding: 5px;
+		border-radius: 5px;
+	}
+ </style>
+ 
+ <!-- Search widget-->
+ <div class="card mb-4">
+  <div class="card-header">Search</div>
+  <div class="card-body d-flex flex-column">
+      <form class="form-group" id="searchForm" method="GET">
+        {{ filter.form.as_p }}
+        <button class="btn btn-primary" id="button-search" type="submit">Go!</button>
+      </form>
+  </div>
+</div>
+<!-- Categories widget-->
+<div class="card mb-4">
+  <div class="card-header">Category</div>
+    <p>Communication</p>
+    <a href="#!">Communication</a>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-sm-6">
+              <ul class="list-unstyled mb-0">
+                {% for tag in tags %}
+                  <li><a href="#!">{{tag.name}}</a></li>
+                {% endfor %}
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Side widget-->
+<div class="card mb-4">
+  <div class="card-header">About nous</div>
+  <div class="card-body">Notre blog est une source d'informations générales sur le tourisme. Nous aimons parler de tout ce qui concerne le tourisme, que ce soit les destinations populaires, les activités à faire, les meilleurs moments pour voyager, les conseils de voyage, les hébergements, les restaurants, etc. Nous cherchons à offrir des informations précises et utiles à tous ceux qui cherchent à voyager et à découvrir de nouveaux endroits. Notre objectif est d'aider les voyageurs à planifier leur voyage en leur fournissant des informations fiables et à jour sur les destinations les plus populaires !</div>
+</div>
